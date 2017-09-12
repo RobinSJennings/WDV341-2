@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
 <head>
@@ -106,3 +107,113 @@ function checkYesForSsCard(){
 </body>
 
 </html>
+=======
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title></title>
+
+<style>
+	body {
+		background-color: black;
+		color: white;
+		border: solid thick grey;
+		border-radius: 45px;
+		text-align: center;
+	}
+	div {
+		background-color: blue;
+		border: solid thick white;
+		border-radius: 45px;
+		text-align: center;
+		width: 40%;
+		margin: 0 auto;
+	}
+	span {
+		display: none;
+	}
+</style>
+<script>
+	
+function checkYesForSsCard(){
+	if (document.getElementById("socialSecurityNumber").checked == false)
+	{
+		document.getElementById("socialSecurityNumber").style.display = "none";
+	}
+	else
+	{
+		document.getElementById("socialSecurityNumber").style.display = "block";
+	}
+}		//I'm trying to get the field in the span for the social security
+		//number to alternately display on and of if you continue to //click the button. But the if/else statement isn't working the //way I want it to. I will continue to research this matter and //work on this.
+</script>
+</head>
+
+<body>
+<h1>WDV341 PHP Email Assignment</h1>
+<h2>Using a Form to Send an Email</h2>
+
+<hr />
+<div>
+<form id="form1" name="form1" method="post" action="formEmailer.php">
+  <p>First Name: 
+    <input type="text" name="First Name" id="firstName" value = ""/>
+</p>
+  <p>Last Name: 
+    <input type="text" name="Last Name" id="lastName" value = ""/>
+  </p>
+  <p>School: 
+    <input type="text" name="School" id="school" />
+  </p>
+  <p>Email:
+	<input type="email" name="Email">
+  </p>
+   <p>Male:
+	<input type = "radio" name = "Gender" id = "male" value = "male" checked/>
+  </p>
+  <p>Female:
+	<input type = "radio" name = "gender" id = "female" value = "female" />
+  </p>
+  <p>Other:
+	<input type = "radio" name = "gender" id = "other" value = "other"/>
+  </p>
+  <p>Ethnicity? (Please Choose)
+	<select id = "ethnicity" name = "Ethnicity">
+		<option value = "Choose a Race" name = "unselectedPU" id = "unselected"/>Select a Race</option>
+		<option value = "caucasian" name = "caucasian" id = "caucasian">Caucasian</option>
+		<option value = "africanAmerican" name = "africanAmerican" id = "africanAmerican">African American</option>
+		<option value = "mexican" name = "mexican" id = "mexican">Mexican</option>
+		<option value = "asian" name = "asian" id = "asian">Asian</option>
+	</select>
+  </p>
+  <p>Are You a U.S. Citizen?
+	<input type = "checkbox" name = "Citizen" id = "Yes" value = "Yes"/>
+  </p>
+  <p>Do You Have a Social Security Card?
+	<input type = "checkbox" name = "ssCard" id = "Yes" value = "Yes" onClick = "checkYesForSsCard()"/>
+  </p>
+<span id = "socialSecurityNumber">
+   <p>Please Enter Your Social Security Number:
+  <input type = "text" name = "sSNumber" value = "" maxlength = "11" size = "11"/>
+  </p>
+</span>
+  <p>Do You Live in a House or Apartmant? (Please Choose)
+	<select id = "living" name = "HouseApartment">
+		<option value = "Please Select" id = "unselected"/>Please Select</option>
+		<option value = "house" id = "house">House</option>
+		<option value = "apartment" id = "apartment">Apartment</option>
+	</select>
+  </p>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+</div>
+<p>&nbsp;</p>
+</body>
+
+</html>
+>>>>>>> master
