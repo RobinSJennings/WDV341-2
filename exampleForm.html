@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
 <title>WDV341 Intro PHP - Form Example</title>
+
+<style>
+	body {
+		background-color: black;
+	}
+	div {
+		background-color: grey;
+		width: 50%;
+		color: black;
+		border: solid thick white;
+		border-radius: 45px;
+		margin-left: 25%;
+	}
+	.neatLittleBorder {
+		border: solid thin black;
+		border-radius: 45px;
+		width: 50%;
+		padding: 2%;
+		margin-left: 25%;
+	}
+	h1, h2 {
+		text-align: center;
+		color: white;
+	}
+</style>
 </head>
 
 <body>
 <h1>WDV341 Intro PHP</h1>
-<p><strong>Basic Form Handler</strong></p>
-<br><br><br>
-<form id="form1" name="form1" method="post" action="formHandler.php">
 
+<div>
+<p style = "text-align: center;"><strong>Basic Form Handler</strong></p>
+
+<form class = "neatLittleBorder" id="form1" name="form1" method="post" action="formHandler.php">
   <p>First Name: 
     <input type="text" name="firstName" id="firstName" />
 </p>
@@ -20,78 +47,42 @@
   <p>School: 
     <input type="text" name="school" id="school" />
   </p>
-  
-  <p><strong>What is the degree you are pursuing:</strong></p>
-  <p>Associates:
-  <input type = "radio" name = "degree" id = "associates" value = "associates"/></p>
-  <p>Bachelors:
-  <input type = "radio" name = "degree" id = "bachelors" value = "bachelors"/></p>
-  <p>masters:
-  <input type = "radio" name = "degree" id = "masters" value = "masters"/></p>
-  <p><strong>Are you going to school full time, or part time:</strong></p>
-  <p>Full Time:
-  <input type = "checkbox" name = "time" id = "fullTime" value = "full time"/></p>
-  <p>Part Time:
-  <input type = "checkbox" name = "time" id = "partTime" value = "part time"/></p>
-  
-  <p>Age:
-  <select name = "age">
-	<option value = "65">65</option>
-	<option value = "64">64</option>
-	<option value = "63">63</option>
-	<option value = "62">62</option>
-	<option value = "61">61</option>
-	<option value = "60">60</option>
-	<option value = "59">59</option>
-	<option value = "58">58</option>
-	<option value = "57">57</option>
-	<option value = "56">56</option>
-	<option value = "55">55</option>
-	<option value = "54">54</option>
-	<option value = "53">53</option>
-	<option value = "52">52</option>
-	<option value = "51">51</option>
-	<option value = "50">50</option>
-	<option value = "49">49</option>
-	<option value = "48">48</option>
-	<option value = "47">47</option>
-	<option value = "46">46</option>
-	<option value = "45">45</option>
-	<option value = "44">44</option>
-	<option value = "43">43</option>
-	<option value = "42">42</option>
-	<option value = "41">41</option>
-	<option value = "40">40</option>
-	<option value = "39">39</option>
-	<option value = "38">38</option>
-	<option value = "37">37</option>
-	<option value = "36">36</option>
-	<option value = "35">35</option>
-	<option value = "34">34</option>
-	<option value = "33">33</option>
-	<option value = "32">32</option>
-	<option value = "31">31</option>
-	<option value = "30">30</option>
-	<option value = "29">29</option>
-	<option value = "28">28</option>
-	<option value = "27">27</option>
-	<option value = "26">26</option>
-	<option value = "25">25</option>
-	<option value = "24">24</option>
-	<option value = "23">23</option>
-	<option value = "22">22</option>
-	<option value = "21">21</option>
-	<option value = "20">20</option>
-	<option value = "19">19</option>
-	<option value = "18" selected>18</option>
-  </select>
+  <p>Male:
+	<input type = "radio" name = "gender" id = "male" value = "male" checked/>
+  </p>
+  <p>Female:
+	<input type = "radio" name = "gender" id = "female" value = "female" />
+  </p>
+  <p>Other:
+	<input type = "radio" name = "gender" id = "other" value = "other"/>
+  </p>
+  <p>Do You Drive a Car?
+	<input type = "checkbox" name = "vehicleType" id = "car" value = "car"/>
+  </p>
+  <p>Do You Drive a Pickup?
+	<input type = "checkbox" name = "vehicleType2" id = "truck" value = "truck"/>
+  </p>
+  <p>What Car Do You Drive?
+	<select id = "vehicle1" name = "vehicle1">
+		<option value = "Select a Vehicle" id = "unselected"/>Select a Style</option>
+		<option value = "Sedan" id = "sedan">Sedan</option>
+		<option value = "Hatchback" id = "hatchback">Hatchback</option>
+		<option value = "SUV" id = "suv">S.U.V.</option>
+	</select>
+  </p>
+  <p>What Kind of Truck Do You Drive?
+	<select id = "vehicle2" name = "vehicle2">
+		<option value = "Select a Vehicle" name = "unselectedPU" id = "unselected"/>Select a Style</option>
+		<option value = "fullSize" name = "fullsize" id = "fullsize">Full Size</option>
+		<option value = "compactPickup" name = "compactPickup" id = "compactPickup">Compact Pickup</option>
+	</select>
   </p>
   <p>
     <input type="submit" name="button" id="button" value="Submit" />
     <input type="reset" name="button2" id="button2" value="Reset" />
   </p>
 </form>
-
+</div>
 <p>&nbsp;</p>
 </body>
 

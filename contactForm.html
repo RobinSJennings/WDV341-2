@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>WDV341 Intro PHP - Programming project</title>
+
+<style>
+
+	body {
+		background-image: url("rbGrid.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	
+	div {
+		background-color: black;
+		opacity: 0.8;
+		color: red;
+		text-align: center;
+	}
+
+</style>
+
+<script>
+
+	function showProductProblemComments()
+	{
+		
+	}
+
+</script>
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+<h2>Programming Project - Contact Form</h2>
+
+<div>
+<form name="form1" method="post" action="processForm.php">
+  <p>&nbsp;</p>
+  <p>
+    <label>Your Name:
+      <input type="text" name="Name" id="textfield" required>
+    </label>
+  </p>
+<br><br>
+  <p>Your Email: 
+    <input type="text" name="Email Address" id="textfield2" required>
+  </p>
+<br><br>
+  <p>Reason for contact: 
+    <label>
+      <select name="Reason" id="select2" required>
+        <option value="default">Please Select a Reason</option>
+        <option value="product">Product Problem</option>
+        <option value="return">Return a Product</option>
+        <option value="billing">Billing Question</option>
+        <option value="technical">Report a Website Problem</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+  </p>
+<br><br>
+  <p>
+    <label required>Comments:
+      <textarea name="Product Problem" id="textarea" cols="45" rows="5"></textarea>
+    </label>
+  </p>
+  <p>
+   <!-- <label required>Comments:
+      <textarea name="Return a Product" id="textarea2" cols="45" rows="5"></textarea>
+    </label>-->
+  </p>
+<br><br>
+  <p>
+    <label>
+      <input type="checkbox" name="Mailing List" id="checkbox">
+      Please put me on your mailing list.</label>
+  </p>
+
+  <p>
+    <label>
+      <input type="checkbox" name="More Info" id="checkbox2">
+      Send me more information</label>
+  about your products.  </p>
+<br><br>
+  <p>
+    <input type="hidden" name="hiddenField" id="hiddenField" value="application-id:US447">
+  </p>
+<br><br>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit">
+    <input type="reset" name="button2" id="button2" value="Reset">
+  </p>
+</form>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>
