@@ -1,0 +1,14 @@
+
+
+	<food>
+		<Item>Java and AJAX</Item>
+		<Prices>2.50</Prices>
+		<descriptions>
+			<description>
+				<what>Smooth vanilla frosting on white cake</what>
+				<price>2.50</price>
+				<image>vanilla.jpg</image>
+			</description>
+		</descriptions>
+		<Comments/>
+	</food>

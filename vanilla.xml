@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<food>
+		<Item>Java and XML</Item>
+		<Prices>2.50</Prices>
+		<descriptions>
+			<description>
+				<what>Smooth vanilla frosting on white cake</what>
+				<price>2.50</price>
+				<image>vanilla.jpg</image>
+			</description>
+		</descriptions>
+		<Comments/>
+	</food>
