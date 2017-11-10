@@ -1,7 +1,8 @@
 <?php
 
 echo "<table style='border: solid thick red;'>";
- echo "<tr><th><h1>Name of contact</h1></th></tr>";
+ echo "<tr><td>Contact's ID</td><th>Name of contact</th><th>Contact's Email</td><td>contact's Representative</td><td>Reason for Contact</td><td>Contact's Comments</td><td>Newsletter?</td><td>Product Brochure?</td><td>Date of contact</td><td>Time of day?</td><td>Follow up date</td><td>A.M. or P.M.</td></tr>";
+
 
 class TableRows extends RecursiveIteratorIterator { 
     function __construct($it) { 
@@ -30,14 +31,15 @@ class TableRows extends RecursiveIteratorIterator {
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT contact_name FROM wdv_341_customer_contacts"); 
+    $stmt = $conn->prepare("SELECT cust_id, contact_name, contact_email, contact_rep, contact_reason, contact_comments, contact_newsletter, contact_more_products, contact_date, contact_time, contact_follow_up, contact_time_frame FROM wdv_341_customer_contacts"); 
     $stmt->execute();
-
+		echo "connected Successfully";
     // set the resulting array to associative
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
+    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
         echo $v;
     }
+	echo "These items have been selected";
 }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
