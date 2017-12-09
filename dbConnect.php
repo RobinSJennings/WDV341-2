@@ -2,9 +2,9 @@
 	session_start();
 
 	$servername = "localhost";
-	$username = "nephilim42_wdv";
+	$username = "nephilim42_341";
 	$password = "nephilim42";
-	$dbname = "nephilim42_wdv";
+	$dbname = "nephilim42_341";
 	
 	
 try{
