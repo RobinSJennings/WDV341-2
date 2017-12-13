@@ -1,0 +1,186 @@
+<html>
+
+<head>
+
+	<style>
+	
+		body {
+			background-color: #444444;
+			color: white;
+		}
+		
+		nav {
+			text-align: center;
+			background: rgba(30, 30, 30, 0.9);
+			border: solid thick blue;
+			border-radius: 45px;
+			width: 75%;
+			margin:0 auto;
+		}
+		
+		footer {
+			text-align: center;
+			background: rgba(30, 30, 30, 0.9);
+			border-top: solid thick blue;
+			width: 100%;
+		}
+		
+		.side {
+			margin-top: 10%;
+			float: left;
+		}
+		
+		.side1 {
+			margin-top: 10%;
+			float: right;
+		}
+		
+		#center {
+			text-align: center;
+		}
+	
+		#order {
+			background: rgba(30, 30, 30, 0.8);
+			width: 50%;
+			border: solid thick blue;
+			border-radius: 45px;
+			margin: 0 auto;
+			padding: 2%;
+			float: none;
+		}
+		
+		#submit {
+			margin: 0 auto;
+			width: 100px;
+			background-color: blue;
+			color: white;
+		}
+		
+		#reset {
+			margin: 0 auto;
+			width: 100px;
+			background-color: blue;
+			color: white;
+		}
+		
+		#image {
+			margin: 0 auto;
+		}
+		
+		.error {
+			color:red;
+		}
+		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		li {
+			display: inline;
+		}
+		
+		.rainbow {
+			/* Chrome, Safari, Opera */
+			-webkit-animation: rainbow 1s infinite; 
+  
+			/* Internet Explorer */
+			-ms-animation: rainbow 1s infinite;
+  
+			  /* Standard Syntax */
+			  animation: rainbow 1s infinite; 
+			}
+
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes rainbow{
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				80%{color: blue;}
+				100%{color: orange;}	
+			}
+			/* Internet Explorer */
+			@-ms-keyframes rainbow{
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				80%{color: blue;}
+				100%{color: orange;}	
+			}
+
+			/* Standar Syntax */
+			@keyframes rainbow{
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				80%{color: blue;}
+				100%{color: orange;}	
+			}
+	</style>
+
+</head>
+
+<body>
+
+
+	
+
+
+<nav>
+	<h3>RJ's Custom T-Shirts &nbsp &nbsp &nbsp The Super Awesome Custom T-Shirt Company</h3>
+	
+<ul>
+<h2>
+  <li><a href="RJ's Home.html">Home</a></li>
+  <li><a href="RJ's T-Shirt Order Form.php">Order</a></li>
+  <li><a href="RJ's Contact Form.php">Contact</a></li>
+  <li><a href="RJ's About Page.html">About</a></li>
+  <li><a href="RJ's Log Out.php">Log Out</a></li>
+</h2>
+</ul>
+
+	
+</nav>	
+<br>
+
+		<marquee class = "rainbow"><h1>25% ALL CUSTOM ORDERS FOR THE MONTH OF DECEMBER. USE PROMO CODE: customesale</h1></marquee>
+	
+
+	<img src = "tshirtSale.png" id = "image" height = "35%" width = "100%">
+	<br>
+	
+	<br><br>
+
+	<img src = "tshirts.jpg" width = "22%" height = "35%" class = "side">
+	
+	<img src = "tshirts1.jpg" width = "22%" height = "35%" class = "side1">
+<div id = "order">
+		<p class = "rainbow" style = "text-align: center;">Your order has been placed. An email with your order information has been sent to you as confirmation of your successful order</p>
+
+
+</div>
+
+<br>
+
+<footer>
+
+	<p>To review your order, click <a href = "Rj's Check Order.php">Here</a>
+	<p>to update your order, click <a href = "RJ's Update.php">Here</a>
+	<p>to cancel your order, click <a href = "RJ's Delete Order.php">Here</a>
+	
+<hr>
+<hr>
+
+	<h2>RJ's Custom T-Shirts</h2>
+<hr>
+	<p>Website created by Robin Jennings<br><a href = "http://www.nephilim42.com/myPersonalWebsite/mySiteIndex.html">Nephilim42Coding</a><br>515-422-6630<br>rsjennings@dmacc.edu</p>
+
+</footer>
+<?php
+	$conn = null;
+	$stmt = null;
+?>
+</body>
+
+</html>
